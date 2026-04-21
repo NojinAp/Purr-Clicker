@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Purr Clicker</title>
+    <link rel="stylesheet" href ="css/style.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <script src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="board">
+
+            <h1 id="heading"><img src="images/sparkling_flipped.png" id="headingIcon">Purr Clicker<img src="images/sparkling.png" id="headingIcon2"></h1>
+
+            <section id="upgrades">
+                <h2 class="options">Upgrade Shop</h2>
+                <div class="upgrade-section">
+                    <div class="upgrade-row-1">
+                        <button id="clickUpgradeButton1" class="option-buttons">
+                            <b>Soft Brush</b><br>+<span id="clickValue1">1</span> purr per click<br>Cost: <span id="clickUpgradeCost1">50</span>
+                        </button>
+
+                        <button id="clickUpgradeButton2" class="option-buttons">
+                            <b>Catnip</b><br>+<span id="clickValue2">5</span> purrs per click<br>Cost: <span id="clickUpgradeCost2">120</span>
+                        </button>
+                    </div>
+                    
+                    <div class="upgrade-row-2">
+                        <button id="clickUpgradeButton3" class="option-buttons">
+                            <b>Luxury Scratcher</b><br>+<span id="clickValue3">10</span> purrs per click<br>Cost: <span id="clickUpgradeCost3">300</span>
+                        </button>
+
+                        <button id="autoClickerButton1" class="option-buttons">
+                            <b>Auto Purring I</b><br><span id="autoValue1">1</span> click / 2 seconds<br>Cost: <span id="autoPurringCost1">200</span>
+                        </button>
+                    </div>      
+
+                    <div class="upgrade-row-2">
+                        <button id="autoClickerButton2" class="option-buttons">
+                            <b>Auto Purring II</b><br><span id="autoValue2">1</span> click / 1 seconds<br>Cost: <span id="autoPurringCost2">500</span>
+                        </button>
+
+                        <button id="autoClickerButton3" class="option-buttons">
+                            <b>Auto Purring III</b><br><span id="autoValue3">1</span> click / 0.5 seconds<br>Cost: <span id="autoPurringCost3">1200</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rewards">
+                <h2 class="options">Rewards</h2>
+                <div id="rewardList">
+                    <div class="reward-slot" data-tooltip="First Purrs&#10;Reach 75 purrs"><img src="images/paw_locked.png"  id="rew1"  class="reward-badge" data-earned="false" data-color="images/paw_01_cherry_red.png"></div>
+                    <div class="reward-slot" data-tooltip="Getting Warmed Up&#10;Reach 200 purrs"><img src="images/paw_locked.png"  id="rew2"  class="reward-badge" data-earned="false" data-color="images/paw_02_coral_peach.png"></div>
+                    <div class="reward-slot" data-tooltip="Treat Spender&#10;Unlock Auto Purring I"><img src="images/paw_locked.png"  id="rew3"  class="reward-badge" data-earned="false" data-color="images/paw_03_tangerine.png"></div>
+                    <div class="reward-slot" data-tooltip="Purr Collector&#10;Reach 500 purrs"><img src="images/paw_locked.png"  id="rew4"  class="reward-badge" data-earned="false" data-color="images/paw_04_golden_yellow.png"></div>
+                    <div class="reward-slot" data-tooltip="Getting Comfy&#10;Reach 1,000 purrs"><img src="images/paw_locked.png"  id="rew5"  class="reward-badge" data-earned="false" data-color="images/paw_05_lime_green.png"></div>
+                    <div class="reward-slot" data-tooltip="Upgrade Starter&#10;Buy 2 upgrades"><img src="images/paw_locked.png"  id="rew6"  class="reward-badge" data-earned="false" data-color="images/paw_06_forest_green.png"></div>
+                    <div class="reward-slot" data-tooltip="Auto Addict&#10;Unlock Auto Purring II"><img src="images/paw_locked.png"  id="rew7"  class="reward-badge" data-earned="false" data-color="images/paw_07_mint.png"></div>
+                    <div class="reward-slot" data-tooltip="Purr Machine&#10;Reach 2,500 purrs"><img src="images/paw_locked.png"  id="rew8"  class="reward-badge" data-earned="false" data-color="images/paw_08_teal_cyan.png"></div>
+                    <div class="reward-slot" data-tooltip="Speed Demon&#10;Unlock Auto Purring III"><img src="images/paw_locked.png"  id="rew9"  class="reward-badge" data-earned="false" data-color="images/paw_09_sky_blue.png"></div>
+                    <div class="reward-slot" data-tooltip="Paw Enthusiast&#10;Reach 5,000 purrs"><img src="images/paw_locked.png"  id="rew10" class="reward-badge" data-earned="false" data-color="images/paw_10_royal_blue.png"></div>
+
+                    <div class="reward-slot" data-tooltip="Shop Regular&#10;Buy 5 upgrades"><img src="images/paw_locked.png"  id="rew11" class="reward-badge" data-earned="false" data-color="images/paw_11_indigo.png"></div>
+                    <div class="reward-slot" data-tooltip="Purr Mogul&#10;Reach 10,000 purrs"><img src="images/paw_locked.png"  id="rew12" class="reward-badge" data-earned="false" data-color="images/paw_12_purple.png"></div>
+                    <div class="reward-slot" data-tooltip="Clicker Elite&#10;Reach 20,000 purrs"><img src="images/paw_locked.png"  id="rew13" class="reward-badge" data-earned="false" data-color="images/paw_13_violet.png"></div>
+                    <div class="reward-slot" data-tooltip="Upgrade Baron&#10;Buy 8 upgrades"><img src="images/paw_locked.png"  id="rew14" class="reward-badge" data-earned="false" data-color="images/paw_14_magenta.png"></div>
+                    <div class="reward-slot" data-tooltip="Halfway Hero&#10;Reach 35,000 purrs"><img src="images/paw_locked.png"  id="rew15" class="reward-badge" data-earned="false" data-color="images/paw_15_rose_gold.png"></div>
+                    <div class="reward-slot" data-tooltip="Purr Tycoon&#10;Reach 50,000 purrs"><img src="images/paw_locked.png"  id="rew16" class="reward-badge" data-earned="false" data-color="images/paw_16_sunset_orange.png"></div>
+                    <div class="reward-slot" data-tooltip="Upgrade King&#10;Buy 12 upgrades"><img src="images/paw_locked.png"  id="rew17" class="reward-badge" data-earned="false" data-color="images/paw_17_ocean_blue.png"></div>
+                    <div class="reward-slot" data-tooltip="Purr Overlord&#10;Reach 75,000 purrs"><img src="images/paw_locked.png"  id="rew18" class="reward-badge" data-earned="false" data-color="images/paw_18_lavender.png"></div>
+                    <div class="reward-slot" data-tooltip="Power Buyer&#10;Buy 16 upgrades"><img src="images/paw_locked.png"  id="rew19" class="reward-badge" data-earned="false" data-color="images/paw_19_hot_magenta.png"></div>
+                    <div class="reward-slot" data-tooltip="Six Figures&#10;Reach 100,000 purrs"><img src="images/paw_locked.png"  id="rew20" class="reward-badge" data-earned="false" data-color="images/paw_20_emerald.png"></div>
+
+                    <div class="reward-slot" data-tooltip="Sweet Milestone&#10;Reach 150,000 purrs"><img src="images/paw_locked.png"  id="rew21" class="reward-badge" data-earned="false" data-color="images/paw_21_cotton_candy.png"></div>
+                    <div class="reward-slot" data-tooltip="Upgrade Veteran&#10;Buy 20 upgrades"><img src="images/paw_locked.png"  id="rew22" class="reward-badge" data-earned="false" data-color="images/paw_22_neon_green.png"></div>
+                    <div class="reward-slot" data-tooltip="Electric&#10;Reach 250,000 purrs"><img src="images/paw_locked.png"  id="rew23" class="reward-badge" data-earned="false" data-color="images/paw_23_neon_cyan.png"></div>
+                    <div class="reward-slot" data-tooltip="Blood, Sweat &amp; Purrs&#10;Reach 500,000 purrs"><img src="images/paw_locked.png"  id="rew24" class="reward-badge" data-earned="false" data-color="images/paw_24_deep_red.png"></div>
+                    <div class="reward-slot" data-tooltip="Golden Paw&#10;Buy 25 upgrades"><img src="images/paw_locked.png"  id="rew25" class="reward-badge" data-earned="false" data-color="images/paw_25_peach_gold.png"></div>
+                    <div class="reward-slot" data-tooltip="Galaxy Brain&#10;Reach 750,000 purrs"><img src="images/paw_locked.png"  id="rew26" class="reward-badge" data-earned="false" data-color="images/paw_26_galaxy_purple.png"></div>
+                    <div class="reward-slot" data-tooltip="On Fire&#10;Buy 30 upgrades"><img src="images/paw_locked.png"  id="rew27" class="reward-badge" data-earned="false" data-color="images/paw_27_fire.png"></div>
+                    <div class="reward-slot" data-tooltip="Cool Cat&#10;Reach 1,000,000 purrs"><img src="images/paw_locked.png"  id="rew28" class="reward-badge" data-earned="false" data-color="images/paw_28_ice_blue.png"></div>
+                    <div class="reward-slot" data-tooltip="Toxic Levels&#10;Buy 35 upgrades"><img src="images/paw_locked.png"  id="rew29" class="reward-badge" data-earned="false" data-color="images/paw_29_toxic_lime.png"></div>
+                    <div class="reward-slot" data-tooltip="Purr Completionist&#10;Reach 2,000,000 purrs"><img src="images/paw_locked.png"  id="rew30" class="reward-badge" data-earned="false" data-color="images/paw_30_bubblegum_blue.png"></div>
+                </div>
+            </section>
+
+            <button id="help">Help</button>
+
+        </div>
+
+        <div id="gameBox">
+            <div id="catClickArea">
+                <img src="images/cat.png" id="catPic">
+            </div>
+            <section id="scoreboard">
+                <h2>Scoreboard</h2>
+                <p>Purrs: <span id="purrCount">0</span></p>
+                <p>Purrs per Click: <span id="perClickValue">1</span></p>
+                <p>Total Upgrades: <span id="upgradeCount">0</span></p>
+            </section>
+        </div>
+    </div>
+
+    <div id="helpOverlay">
+        <div id="helpContent">
+            <p>
+                <h3>Welcome to Purr Clicker!</h3>
+                In this game, your goal is to collect purrs by interacting with the cat and purchasing upgrades to 
+                increase your progress over time.
+                <br>
+                <h3>How to Play</h3>
+                <ul>
+                    <li>Click on the cat to earn purrs.</li>
+                    <li>Each click gives you purrs based on your current purrs per click value.</li>
+                    <li>Use your purrs to buy upgrades from the Upgrade Shop.</li>
+                </ul>
+                <h3>Upgrades</h3>
+                <ul>
+                    <li>Some upgrades increase the number of purrs you earn per click.</li>
+                    <li>Other upgrades unlock and speed up automatic purring, which earns purrs for you over time.</li>
+                    <li>Each upgrade has a cost, and the cost increases after it is purchased.</li>
+                    <li>Only one auto-purring timer runs at a time — the fastest one active wins.</li>
+                </ul>
+                <h3>Rewards</h3>
+                <ul>
+                    <li>30 badges to collect! Hover over a badge to see what it takes to unlock it.</li>
+                    <li>Locked badges appear greyed out. Earn them by reaching purr milestones, buying upgrades, and unlocking auto-purring.</li>
+                    <li>When a reward is earned, the badge lights up and a short congratulations message is shown.</li>
+                </ul>
+                <h3>Scoreboard</h3>
+                <ul>
+                    <li>The scoreboard shows your total purrs, purrs per click, and the number of upgrades you own.</li>
+                    <li>These values update automatically as you play.</li>
+                    <li>Have fun collecting purrs and unlocking all 30 rewards!</li>
+                </ul>
+            </p>
+
+            <button id="closeHelp">Close</button>
+
+        </div>
+        <div id="countRewardMessageBox">
+            <div id="countRewardMessage">
+                <h2>Congratulations!</h2>
+                <p>
+                    You earned the badge "<span id="countBadgeName"></span>" at <span id="count"></span> purrs! 
+                </p>
+            </div>
+        </div>
+
+        <div id="autoRewardMessageBox">
+            <div id="autoRewardMessage">
+                <h2>Congratulations!</h2>
+                <p>
+                    You earned the badge "<span id="autoBadgeName"></span>" by unlocking <span id="autoName"></span>!
+                </p>
+            </div>
+        </div>
+
+        <div id="upgradeRewardMessageBox">
+            <div id="upgradeRewardMessage">
+                <h2>Congratulations!</h2>
+                <p>
+                    You earned the badge "<span id="upgradeBadgeName"></span>" for buying <span id="upgradeCountMsg"></span> upgrades!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- tooltip element -->
+    <div id="badgeTooltip"></div>
+
+</body>
+</html>
